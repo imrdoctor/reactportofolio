@@ -22,7 +22,7 @@ function App() {
         { path: '*', element: <Notfound /> }  
       ]
     }
-  ])
+  ], { basename: '/reactportofolio' }) // حدد basename هنا
 
   return (
     <RouterProvider router={routes}>
