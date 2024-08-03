@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+nav{
+  background-color: #2c3e50;
+}
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
+  height: 100vh;
+}
+/* Make line ـــ star ــــ */
+.star::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 6rem;
+  height: 4px;
+  background-color: #fff;
+  margin-right: 8px; 
+}
+a{
+  text-decoration: none;
+}
+.star::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 6rem;
+  height: 4px;
+  background-color: #fff;
+  margin-left: 8px; 
+}
+
+
+.star2::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 6rem;
+  height: 4px;
+  background-color: #2c3e50;
+  margin-right: 8px; 
+}
+a{
+  text-decoration: none;
+}
+/* Star 2 */
+.star2::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 6rem;
+  height: 4px;
+  background-color: #2c3e50;
+  margin-left: 8px; 
+}
+nav a{
+  text-decoration: none;
+}
+nav .active{
+  background-color: #1abc9c;
+}
+.input-wrapper {
+  position: relative;
+}
+
+.input-label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  transition: all 0.3s;
+  pointer-events: none;
+  color: #aaa;
+  padding-left: 0.5rem;
+  opacity: 0; /* Hidden by default */
+  visibility: hidden; /* Hidden by default */
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem 0.5rem;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background-color: transparent;
+  transition: border-color 0.3s;
+}
+
+.input-field:focus {
+  border-color: #333;
+}
+
+.input-field:not(:placeholder-shown) + .input-label,
+.input-field:focus + .input-label {
+  top: -0.75rem;
+  background-color: white;
+  padding: 0 0.25rem;
+  font-size: 0.75rem;
+  color: #333;
+  opacity: 1; /* Show label */
+  visibility: visible; /* Show label */
+  transition: .9s;
+}
+
+.input-field:placeholder-shown + .input-label {
+  opacity: 0; /* Hide label */
+  visibility: hidden; /* Hide label */
+}
